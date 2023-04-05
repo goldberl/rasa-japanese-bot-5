@@ -1,0 +1,39 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'ボートです。' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# simple fallback:
+- rule: Single stage fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_ask_affirmation
+
+# User says "I don't know"
+- rule: Send user inform_idk to fallback
+  steps:
+  - intent: inform_idk
+  - action: action_default_ask_affirmation
+
+# send email
+- rule: send an email after address is given
+  steps:
+  - intent: inform_email
+  - action: collect_email_info
+  - action: action_email
+  - action: utter_thanks_for_talking
+  - action: utter_goodbye
+
+# Ask about email
+# - rule: ask about email (start email stories)
+#  steps:
+#  - intent: inform_yes
+#  - action: utter_askifsendemail

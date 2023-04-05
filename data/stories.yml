@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+
+- story: making a doctor's appointment
+  steps:
+  - intent: greet
+  - action: utter_hello
+  - action: utter_ask_appointment
+  - intent: affirm_appointment
+  - action: utter_wakarimashita
+  - action: ask_name
+  - intent: inform_name
+  - action: utter_ask_symptoms
+  - intent: inform_symptoms
+  - action: utter_taihen
+
+- story: user wants to send email
+  steps:
+#  - action: action_dummy
+#  - action: utter_askifsendemail
+  - intent: inform_yes
+  - action: utter_askrecipient
+  - intent: inform_recipient
+  - action: collect_email_info
+  - action: utter_askemail
+#  - intent: inform_email
+#  - action: collect_email_info
+#  - action: action_email
+#  - action: utter_thanks_for_talking
+#  - action: utter_goodbye
+
+- story: user DOES NOT want to send email
+  steps:
+#  - action: action_dummy
+#  - action: utter_askifsendemail
+  - intent: inform_no
+  - action: action_delete_conversation_txt
+  - action: utter_thanks_for_talking
+  - action: utter_goodbye

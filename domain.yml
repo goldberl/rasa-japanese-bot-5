@@ -1,0 +1,87 @@
+version: '3.1'
+intents:
+- bot_challenge
+- goodbye
+- inform_idk
+- inform_yes
+- inform_no
+- inform_email
+- inform_recipient
+- greet
+
+responses:
+  utter_hello:
+  - text: もしもし、医者です。
+  utter_ask_appointment:
+  - text: よやくをしてみたいですか？
+  utter_goodbye:
+  - text: ではまたね。(・ω・)ノ
+    image: https://media.tenor.com/CJk3mN3Em1EAAAAi/goodbye-goodbye-see-you.gif
+  utter_iamabot:
+  - text: ラサのボートです.
+    image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
+  utter_ask_name:
+  - text: おなまえは？
+  utter_thanks_for_talking:
+  - text: ありがとうございました！
+  utter_default:
+  - text: すみません、わかりません。 Please rephrase your answer.
+  utter_askrecipient:
+  - text: Please type the name of the person you want to email.
+  utter_askemail:
+  - text: Please enter the email address of the person you want to email.
+  utter_askifsendemail:
+  - text: Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.
+
+
+entities:
+- name
+- email
+
+slots:
+  name:
+    type: text
+    initial_value: null
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
+
+actions:
+- action_default_ask_affirmation
+- after_handle_did_not_understand_answer
+- action_email
+- action_delete_conversation_txt
+- utter_hello
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- utter_thanks_for_talking
+- utter_default
+- utter_askemail
+- utter_askrecipient
+- utter_askifsendemail
+- action_dummy
+- log_conversation_bot
+- log_conversation_user
+- collect_email_info
+- action_check_numQ
+- action_make_file
+- activate_p1
+- activate_p2
+- activate_p3
+- activate_p4
+- activate_p5
+- activate_p6
+- activate_p7
+- activate_p8
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

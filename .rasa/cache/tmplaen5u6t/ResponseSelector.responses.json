@@ -1,0 +1,47 @@
+{
+  "utter_question/ask_live": [
+    {
+      "text": "北海度からまいります。",
+      "image": "https://media.tenor.com/OrNx79uo8k4AAAAi/gaudi-nodding.gif"
+    }
+  ],
+  "utter_question/ask_occupation": [
+    {
+      "text": "医者として働いております。",
+      "image": "https://media.tenor.com/96XrE_mpMQEAAAAi/nurse-doctor%27s-appointment.gif"
+    }
+  ],
+  "utter_question/ask_family": [
+    {
+      "text": "お母さんとお父さんは京都に住んでおります。兄は東京にいます。"
+    }
+  ],
+  "utter_question/ask_kids": [
+    {
+      "text": "子供が一人おります。むすめは21歳でございまず。"
+    }
+  ],
+  "utter_question/ask_America_activity": [
+    {
+      "text": "7月4日に花火に見にまいりました。",
+      "image": "https://media.tenor.com/EZy6Jg-Mvk0AAAAi/twistopenux-happy-new-year2021.gif"
+    }
+  ],
+  "utter_question/ask_America_reason": [
+    {
+      "text": "ホワイトハウスを見たりアメリカの文化について習ったりしたいでございますから。",
+      "image": "https://media.tenor.com/x7VrAOcZtFoAAAAi/eagle-flap.gif"
+    }
+  ],
+  "utter_question/ask_America_where": [
+    {
+      "text": "ワシントンDCとテネシーにまいりました。"
+    }
+  ],
+  "utter_question/ask_food": [
+    {
+      "text": "ホットドッグとハンバーガーをいただきました。",
+      "image": "https://media.tenor.com/UkyHTVt25gQAAAAi/chilli-dog-chilli-dogs.gif"
+    }
+  ]
+}

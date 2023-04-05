@@ -1,0 +1,42 @@
+{
+  "utter_question/ask_live": [
+    {
+      "text": "北海度からまいります。"
+    }
+  ],
+  "utter_question/ask_occupation": [
+    {
+      "text": "医者として働いております。"
+    }
+  ],
+  "utter_question/ask_family": [
+    {
+      "text": "お母さんとお父さんは京都に住んでおります。兄は東京にいます。"
+    }
+  ],
+  "utter_question/ask_kids": [
+    {
+      "text": "子供が一人おります。むすめは21歳でございまず。"
+    }
+  ],
+  "utter_question/ask_America_activity": [
+    {
+      "text": "7月4日に花火に見にまいりました。"
+    }
+  ],
+  "utter_question/ask_America_reason": [
+    {
+      "text": "ホワイトハウスを見たりアメリカの文化について習ったりしたいでございますから。"
+    }
+  ],
+  "utter_question/ask_America_where": [
+    {
+      "text": "ワシントンDCとテネシーにまいりました。"
+    }
+  ],
+  "utter_question/ask_food": [
+    {
+      "text": "ホットドッグとハンバーガーをいただきました。"
+    }
+  ]
+}

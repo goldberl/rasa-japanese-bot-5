@@ -1,0 +1,5 @@
+
+User message: /greet
+Bot message: こんにちは!
+Bot message: はじめまして、 わたしはにほんごのチャットボットです。(。・ω・)ノ
+Bot message: おなまえは？
