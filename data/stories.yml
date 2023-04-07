@@ -2,18 +2,134 @@ version: "3.1"
 
 stories:
 
-- story: making a doctor's appointment
+- story: doctor's appointment - COVID 19
   steps:
   - intent: greet
   - action: utter_hello
-  - action: utter_ask_appointment
-  - intent: affirm_appointment
-  - action: utter_wakarimashita
-  - action: ask_name
-  - intent: inform_name
-  - action: utter_ask_symptoms
-  - intent: inform_symptoms
-  - action: utter_taihen
+  - action: utter_intro
+  - action: utter_ask_cold
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_fever
+  - intent: inform_yes
+  - action: utter_ask_headache
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_alch
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_sad
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_end_sequence
+  - action: utter_covid
+  - action: utter_covid_advice
+  - action: utter_thank_you
+  - action: utter_take_care
+
+ 
+- story: doctor's appointment - tired
+  steps:
+  - intent: greet
+  - action: utter_hello
+  - action: utter_intro
+  - action: utter_ask_cold
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_fever
+  - intent: inform_no
+  - action: utter_ask_headache
+  - intent: inform_yes
+  - action: utter_ask_alch
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_sad
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_end_sequence
+  - action: utter_tired
+  - action: utter_tired_advice
+  - action: utter_thank_you
+  - action: utter_take_care
+
+- story: doctor's appointment - hangover
+  steps:
+  - intent: greet
+  - action: utter_hello
+  - action: utter_intro
+  - action: utter_ask_cold
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_fever
+  - intent: inform_no
+  - action: utter_ask_headache
+  - intent: inform_no
+  - action: utter_ask_alch
+  - intent: inform_yes
+  - action: utter_ask_sad
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_end_sequence
+  - action: utter_hangover
+  - action: utter_hangover_advice
+  - action: utter_thank_you
+  - action: utter_take_care
+
+- story: doctor's appointment - homesick
+  steps:
+  - intent: greet
+  - action: utter_hello
+  - action: utter_intro
+  - action: utter_ask_cold
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_fever
+  - intent: inform_no
+  - action: utter_ask_headache
+  - intent: inform_no
+  - action: utter_ask_alch
+  - intent: inform_no
+  - action: utter_ask_sad
+  - intent: inform_yes
+  - action: utter_end_sequence
+  - action: utter_homesick
+  - action: utter_homesick_advice
+  - action: utter_thank_you
+  - action: utter_take_care
+
+- story: doctor's appointment - you are okay
+  steps:
+  - intent: greet
+  - action: utter_hello
+  - action: utter_intro
+  - action: utter_ask_cold
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
+  - action: utter_ask_fever
+  - intent: inform_no
+  - action: utter_ask_headache
+  - intent: inform_no
+  - action: utter_ask_alch
+  - intent: inform_no
+  - action: utter_ask_sad
+  - intent: inform_no
+  - action: utter_end_sequence
+  - action: utter_healthy
+  - action: utter_healthy_advice
+  - action: utter_thank_you
+  - action: utter_take_care
+
 
 - story: user wants to send email
   steps:

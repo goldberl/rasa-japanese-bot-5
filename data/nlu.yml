@@ -44,40 +44,6 @@ nlu:
   examples: |
     - だれですか。
     - ひとですか。
-- intent: inform_name
-  examples: |
-    - わたしは[リア](name)です。
-    - [クリス](name)
-    - [たけし](name)です。
-    - [めぐろ](name)です。
-    - [ニーナ](name)
-    - [サラー](name)
-    - [クリスチャン](name)です。
-    - なまえは[メアリー](name)
-    - 私の名前は[さやこ](name)です。
-    - [ジェニファー] (name)
-    - [パーカー](name)
-    - [目黒](name)です。
-    - [アダム](name)
-    - [ベンジャミン](name)
-    - [キャリー](name)
-    - [ダニエル](name)
-    - [エレイン](name)
-    - [フェリクス](name)
-    - [グラント](name)
-    - [ヘンリー](name)
-    - [イザベル](name)
-    - [ジェイミー](name)
-    - [キム](name)
-    - [マリア](name)
-    - [ナオミ](name)
-    - [オリビア](name)
-    - [クィンズィ](name)
-    - [リック](name)
-    - [ステファニー](name)
-    - [ティム](name)
-    - [ベロニカ](name)
-    - [ウィリアム](name)
 - intent: inform_idk
   examples: |
    - わかりません
@@ -89,16 +55,14 @@ nlu:
    - まだきめていない
 - intent: inform_yes
   examples: |
-   - yes
-   - y
-   - of course
-   - yes please
+   - はい
+   - うん
+   - あります
 - intent: inform_no
   examples: |
-   - no
-   - no thank you
-   - nope
-   - n
+   - いいえ
+   - ううん
+   - ありません
 - intent: inform_email
   examples: |
     - [abc@gmail.com](email)

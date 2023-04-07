@@ -11,19 +11,46 @@ intents:
 
 responses:
   utter_hello:
-  - text: もしもし、医者です。
-  utter_ask_appointment:
-  - text: よやくをしてみたいですか？
-  utter_goodbye:
-  - text: ではまたね。(・ω・)ノ
-    image: https://media.tenor.com/CJk3mN3Em1EAAAAi/goodbye-goodbye-see-you.gif
+  - text: こんにちは。お元気でか。
+  utter_intro:
+  - text: 医者です。今日は気分が悪いでしょうか。質問をこたえてください。
+  utter_thank_you:
+  - text: このよやくに来てくれてありがとうございました。また気分が悪かっら、ぜひれんらくしてください。
+  utter_take_care:
+  - text: お大事に。
+  utter_ask_cold:
+  - text: かせをひきますか？
+  utter_ask_fever:
+  - text: ねつがありますか？
+  utter_ask_headache:
+  - text: あたまがいたいですか？
+  utter_ask_alch:
+  - text: よくおさけを飲みますか？
+  utter_ask_sad:
+  - text: さいきんさびしくて、かなしいですか？
+  utter_covid:
+  - text: 病気はコロナウイルスでしょう。
+  utter_covid_advice:
+  - text: くすりを飲んで、じたく（家）にとどまったほうがいいでしょう。
+  utter_tired:
+  - text: 病気はひろうしょう。つまり、つかれているでょう。
+  utter_tired_advice:
+  - text: はやくねたほうがいいと思います。
+  utter_hangover:
+  - text: 病気はふつかよいでしょう。
+  utter_hangover_advice:
+  - text: 来月おさけを飲まないほうがいいでしょう。
+  utter_homesick:
+  - text: 病気はホームシック でしょう。
+  utter_homesick_advice:
+  - text: 友だちと話したり両親に電話かけたりしたほうがいいでしょう。
+  utter_healthy:
+  - text: 病気がありません。つまりけんこうでしょう。なぜ医者に来るかどうでしょうか。
+  utter_healthy_advice:
+  - text: asdf
   utter_iamabot:
   - text: ラサのボートです.
     image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
-  utter_ask_name:
-  - text: おなまえは？
-  utter_thanks_for_talking:
-  - text: ありがとうございました！
   utter_default:
   - text: すみません、わかりません。 Please rephrase your answer.
   utter_askrecipient:
@@ -58,9 +85,6 @@ actions:
 - after_handle_did_not_understand_answer
 - action_email
 - action_delete_conversation_txt
-- utter_hello
-- utter_greet
-- utter_goodbye
 - utter_iamabot
 - utter_thanks_for_talking
 - utter_default
@@ -71,16 +95,30 @@ actions:
 - log_conversation_bot
 - log_conversation_user
 - collect_email_info
-- action_check_numQ
 - action_make_file
-- activate_p1
-- activate_p2
-- activate_p3
-- activate_p4
-- activate_p5
-- activate_p6
-- activate_p7
-- activate_p8
+####################
+- utter_hello
+- utter_intro
+- utter_end_sequence
+- utter_thank_you
+- utter_take_care
+####################
+- utter_ask_cold
+- utter_ask_fever
+- utter_ask_headache
+- utter_ask_alch
+- utter_ask_sad
+####################
+- utter_covid
+- utter_covid_advice
+- utter_tired
+- utter_tired_advice
+- utter_hangover
+- utter_hangover_advice
+- utter_homesick
+- utter_homesick_advice
+- utter_healthy
+- utter_healthy_advice
 
 session_config:
   session_expiration_time: 60

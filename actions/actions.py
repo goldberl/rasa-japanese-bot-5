@@ -43,25 +43,8 @@ class ActionDefaultAskAffirmation(Action):
                lastBotMessage = event.get("text")
        print(lastBotMessage)
        
-       # triggers different rules based on last bot question
-       if lastBotMessage == "あれ、日本語を話しますか？":
-           return [FollowupAction("activate_p1")]
-       elif lastBotMessage == "どこで日本語を勉強なさいましたか？":
-           return [FollowupAction("activate_p2")]
-       elif lastBotMessage == "すごいですね。お名前は？":
-           return [FollowupAction("activate_p3")]
-       elif lastBotMessage == "ごしゅっしんはどちらですか？":
-           return [FollowupAction("activate_p4")]
-       elif lastBotMessage == "日本にいらっしゃったことがありますか？":
-           return [FollowupAction("activate_p5")]
-       elif lastBotMessage == "日本のどこにいらっしゃいますか？":
-           return [FollowupAction("activate_p6")]
-       elif lastBotMessage == "日本で何をなさいますか？":
-           return [FollowupAction("activate_p7")]   
-       elif lastBotMessage == "どこに住んでいらっしゃいますか？":
-           return [FollowupAction("activate_p8")]        
-       # Fallback for if the bot doesn't understand the receipient's name for the email or the email address
-       elif "Please type the name of the person you want to email." in lastBotMessage:
+       # email fallback
+       if "Please type the name of the person you want to email." in lastBotMessage:
            dispatcher.utter_message('The person you want to email is ' + lastOutput)
            SlotSet("recipient", lastOutput)
            return [FollowupAction("collect_email_info")]
@@ -82,8 +65,6 @@ class AfterHandleDidNotUnderstandAnswer(Action):
 
     def run(self, dispatcher, tracker, domain):
         print("in AfterHandleDidNotUnderstandAnswer")
-        
-        # dispatcher.utter_message('We bonked at the beginning, so do not have any valid slots I can use to make bot look smart.  Ohe well.  Let us just resume the story with student asking bot a question.')
 
         # Gets last output of bot (based on dispatcher.utter_message from ActionDefaultAskAffirmation)
         for event in tracker.events:
@@ -111,6 +92,21 @@ class AfterHandleDidNotUnderstandAnswer(Action):
         
         print(lastUserIntent)
         return [Restarted()]
+
+# End sequence
+class EndSequence(Action):
+    def name(self) -> Text:
+        return "utter_end_sequence"
+    def run(self, dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        dispatcher.utter_message('そうなんですか。')
+        dispatcher.utter_message('しょうしょうお待ちください。')
+        dispatcher.utter_message('。。。。。')
+        dispatcher.utter_message('。。。。。')
+        dispatcher.utter_message('。。。。。')
+        dispatcher.utter_message('わかりました。')
+        return[]
 
 #Create action to log conversation, each time called will capture last bot output
 class LogConversationBot(Action):
@@ -317,45 +313,6 @@ class DeleteConversationTxt(Action):
         if os.path.exists(uniqueFileTwo):
             os.remove(uniqueFileTwo)
         return []
-
-class ActionCheckNumQuestions(Action):
-# 8 questions currently
-    def name(self) -> Text:
-        return "action_check_numQ"
-
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-	domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        #keeps a counter in a text file of how many questions were asked.
-        
-        uniqueFile = "conversationLogs/questionCounter_" + tracker.sender_id + ".txt"
-        question_txt = open(uniqueFile, "r")
-        num_q=question_txt.read()
-        question_txt.close()
-
-        if int(num_q) < 7:
-            question_txt = open(uniqueFile, "w")
-            nextWrite=int(num_q)+1
-            question_txt.write(str(nextWrite))
-            question_txt.close()
-            question_txt = open(uniqueFile, "r")
-            num_q = question_txt.read()
-            question_txt.close()
-            dispatcher.utter_message(text="You asked " + num_q + " questions")
-            print("NumQ after adding 1:　" + num_q)
-            num_qTwo=int(num_q)
-
-        else:
-            print("User asked " + str(num_q))
-            dispatcher.utter_message(text="You asked 8 questions. You're finished!")
-            dispatcher.utter_message(text="Do you want to send an email of the conversation log to anyone? Please type 'yes' or 'no' in English.")
-            num_qTwo=int(num_q)
-            question_txt = open(uniqueFile, "w")
-            question_txt.write("0")
-            question_txt.close()
-            # returns follow up action asking user if they want to email the conversation log
-            return [FollowupAction("action_dummy")]
         
 
 class ActionMakeFile(Action):
@@ -373,78 +330,6 @@ class ActionMakeFile(Action):
         question_txt.write("0")
         question_txt.close()
 
-class ActionActivatePart1(Action):
-    def name(self) -> Text:
-        return "activate_p1"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 1 of the conversation")
-        return[]
-
-class ActionActivatePart2(Action):
-    def name(self) -> Text:
-        return "activate_p2"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 2 of the conversation")
-        return[]
-
-class ActionActivatePart3(Action):
-    def name(self) -> Text:
-        return "activate_p3"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 3 of the conversation")
-        return[]
-
-
-class ActionActivatePart4(Action):
-    def name(self) -> Text:
-        return "activate_p4"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 4 of the conversation")
-        return[]
-
-class ActionActivatePart5(Action):
-    def name(self) -> Text:
-        return "activate_p5"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 5 of the conversation")
-        return[]
-
-class ActionActivatePart6(Action):
-    def name(self) -> Text:
-        return "activate_p6"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 6 of the conversation")
-        return[]
-
-class ActionActivatePart7(Action):
-    def name(self) -> Text:
-        return "activate_p7"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 7 of the conversation")
-        return[]
-
-class ActionActivatePart8(Action):
-    def name(self) -> Text:
-        return "activate_p8"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        print("Activating part 8 of the conversation")
-        return[]
 
 class ActionDummmy(Action):
 
