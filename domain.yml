@@ -19,7 +19,7 @@ responses:
   utter_take_care:
   - text: お大事に。
   utter_ask_cold:
-  - text: かせをひきますか？
+  - text: かぜをひきますか？
   utter_ask_fever:
   - text: ねつがありますか？
   utter_ask_headache:
