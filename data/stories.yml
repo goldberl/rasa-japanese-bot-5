@@ -46,9 +46,7 @@ stories:
   - action: utter_ask_headache
   - intent: inform_yes
   - action: utter_ask_alch
-  - or:
-    - intent: inform_yes
-    - intent: inform_no
+  - intent: inform_no
   - action: utter_ask_sad
   - or:
     - intent: inform_yes

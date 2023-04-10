@@ -97,9 +97,7 @@ class AfterHandleDidNotUnderstandAnswer(Action):
 class EndSequence(Action):
     def name(self) -> Text:
         return "utter_end_sequence"
-    def run(self, dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message('そうなんですか。')
         dispatcher.utter_message('しょうしょうお待ちください。')
         dispatcher.utter_message('。。。。。')
