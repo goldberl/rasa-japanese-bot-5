@@ -47,7 +47,9 @@ responses:
   utter_healthy:
   - text: 病気がありません。つまりけんこうでしょう。なぜ医者に来るかどうでしょうか。
   utter_healthy_advice:
-  - text: asdf
+  - text: 気分が悪かったら、ぜひ休んだほうがいいです。
+  utter_goodbye:
+  - text: さよなら。
   utter_iamabot:
   - text: ラサのボートです.
     image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
@@ -98,6 +100,7 @@ actions:
 - action_make_file
 ####################
 - utter_hello
+- utter_goodbye
 - utter_intro
 - utter_end_sequence
 - utter_thank_you

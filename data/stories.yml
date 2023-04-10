@@ -71,7 +71,9 @@ stories:
   - action: utter_ask_fever
   - intent: inform_no
   - action: utter_ask_headache
-  - intent: inform_no
+  - or:
+    - intent: inform_yes
+    - intent: inform_no
   - action: utter_ask_alch
   - intent: inform_yes
   - action: utter_ask_sad
@@ -113,6 +115,7 @@ stories:
   - action: utter_hello
   - action: utter_intro
   - action: utter_ask_cold
+
   - intent: inform_no
   - action: utter_ask_fever
   - intent: inform_no
