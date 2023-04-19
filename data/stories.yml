@@ -25,7 +25,12 @@ stories:
   - or:
     - intent: inform_yes
     - intent: inform_no
-  - action: utter_end_sequence
+  - action: utter_sounandesuka
+  - action: utter_please_wait
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_wakarimashita
   - action: utter_covid
   - action: utter_covid_advice
   - action: utter_thank_you
@@ -51,7 +56,12 @@ stories:
   - or:
     - intent: inform_yes
     - intent: inform_no
-  - action: utter_end_sequence
+  - action: utter_sounandesuka
+  - action: utter_please_wait
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_wakarimashita
   - action: utter_tired
   - action: utter_tired_advice
   - action: utter_thank_you
@@ -78,7 +88,12 @@ stories:
   - or:
     - intent: inform_yes
     - intent: inform_no
-  - action: utter_end_sequence
+  - action: utter_sounandesuka
+  - action: utter_please_wait
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_wakarimashita
   - action: utter_hangover
   - action: utter_hangover_advice
   - action: utter_thank_you
@@ -101,7 +116,12 @@ stories:
   - intent: inform_no
   - action: utter_ask_sad
   - intent: inform_yes
-  - action: utter_end_sequence
+  - action: utter_sounandesuka
+  - action: utter_please_wait
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_wakarimashita
   - action: utter_homesick
   - action: utter_homesick_advice
   - action: utter_thank_you
@@ -123,7 +143,12 @@ stories:
   - intent: inform_no
   - action: utter_ask_sad
   - intent: inform_no
-  - action: utter_end_sequence
+  - action: utter_sounandesuka
+  - action: utter_please_wait
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_dots
+  - action: utter_wakarimashita
   - action: utter_healthy
   - action: utter_healthy_advice
   - action: utter_thank_you

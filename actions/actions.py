@@ -93,19 +93,6 @@ class AfterHandleDidNotUnderstandAnswer(Action):
         print(lastUserIntent)
         return [Restarted()]
 
-# End sequence
-class EndSequence(Action):
-    def name(self) -> Text:
-        return "utter_end_sequence"
-    def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('そうなんですか。')
-        dispatcher.utter_message('しょうしょうお待ちください。')
-        dispatcher.utter_message('。。。。。')
-        dispatcher.utter_message('。。。。。')
-        dispatcher.utter_message('。。。。。')
-        dispatcher.utter_message('わかりました。')
-        return[]
-
 #Create action to log conversation, each time called will capture last bot output
 class LogConversationBot(Action):
   
