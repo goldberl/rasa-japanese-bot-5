@@ -139,3 +139,16 @@ nlu:
     - [Jane](recipient)
     - [John](recipient)
     - [Bob](recipient)
+- intent: inform_yes_eng
+  examples: |
+    - yes
+    - sure
+    - y
+    - yes please
+- intent: inform_no_eng
+  examples: |
+    - no
+    - nope
+    - n
+    - no thank you
+

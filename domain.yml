@@ -5,6 +5,8 @@ intents:
 - inform_idk
 - inform_yes
 - inform_no
+- inform_yes_eng
+- inform_no_eng
 - inform_email
 - inform_recipient
 - greet
@@ -14,60 +16,60 @@ responses:
   - text: こんにちは。お元気でか。
   utter_intro:
   - text: 医者です。今日は気分が悪いでしょうか。質問をこたえてください。
-    image: https://tenor.com/vqn7w8y4EvZ.gif
+    image: https://media.tenor.com/96XrE_mpMQEAAAAi/nurse-doctor%27s-appointment.gif
   utter_thank_you:
   - text: このよやくに来てくれてありがとうございました。また気分が悪かっら、ぜひれんらくしてください。
   utter_take_care:
   - text: お大事に。
-    image: https://tenor.com/TVSEuJgc21.gif
+    image: https://media.tenor.com/CJk3mN3Em1EAAAAi/goodbye-goodbye-see-you.gif
   utter_ask_cold:
   - text: かぜをひきますか？
-    image: https://tenor.com/bftIK.gif
+    image: https://media.tenor.com/pk14BEX9RYsAAAAi/kawai-cute.gif
   utter_ask_fever:
   - text: ねつがありますか？
-    image: https://tenor.com/cW5o6S2HXei.gif
+    image: https://media.tenor.com/IHx3JbH_yRwAAAAi/white-cute.gif
   utter_ask_headache:
   - text: あたまがいたいですか？
-    image: https://tenor.com/3xHm.gif
+    image: https://media.tenor.com/SFgxqzCoK7YAAAAi/ouch-headache.gif
   utter_ask_alch:
   - text: よくおさけを飲みますか？
-    image: https://tenor.com/rvmfjnmFta8.gif
+    image: https://media.tenor.com/yf3FEYsXYnAAAAAi/rabbit-animal.gif
   utter_ask_sad:
   - text: さいきんさびしくて、かなしいですか？
-    image: https://tenor.com/bUWft.gif
+    image: https://media.tenor.com/925LDfyVUGEAAAAi/cute-sad.gif
   utter_covid:
   - text: 病気はコロナウイルスでしょう。
   utter_covid_advice:
   - text: くすりを飲んで、じたく（家）にとどまったほうがいいでしょう。そしてよく手を洗ってください。
-    image: https://tenor.com/bGJ6P.gif
+    image: https://media.tenor.com/YBRq5_7jMGMAAAAi/capoo-blue.gif
   utter_tired:
   - text: 病気はひろうしょう。つまり、つかれているでょう。
   utter_tired_advice:
   - text: はやくねたほうがいいと思います。
-    image: https://tenor.com/bFS3X.gif
+    image: https://media.tenor.com/84E5TjgX0NYAAAAi/sleep.gif
   utter_hangover:
   - text: 病気はふつかよいでしょう。
   utter_hangover_advice:
   - text: 来月おさけを飲まないほうがいいでしょう。
-    image: https://tenor.com/bbz6G.gif
+    image: https://media.tenor.com/0WjzXQ70n70AAAAi/no-head-shaking.gif
   utter_homesick:
-  - text: 病気はホームシック でしょう。
+  - text: 病気はホームシックでしょう。
   utter_homesick_advice:
   - text: 友だちと話したり両親に電話かけたりしたほうがいいでしょう。
-    image: https://tenor.com/8Qza.gif
+    image: https://media.tenor.com/7NavtQBNi0IAAAAi/spikethe-hedgehog-phone.gif
   utter_healthy:
   - text: 病気がありません。つまりけんこうでしょう。なぜ医者に来るかどうでしょうか。
-    image: https://tenor.com/bjCRl.gif
+    image: https://media.tenor.com/BnL0rOm6j3sAAAAi/quby-cute.gif
   utter_healthy_advice:
   - text: 気分が悪かったら、ぜひ休んだほうがいいです。
   utter_goodbye:
   - text: さよなら。
-    image: https://tenor.com/tUoc5jRtlAJ.gif
+    image: https://media.tenor.com/5f01dctcXNMAAAAi/greetings-hey.gif
   utter_sounandesuka:
   - text: そうなんですか。
   utter_please_wait:
   - text: 少々お待ちください。
-    image: https://tenor.com/bG4pB.gif
+    image: https://media.tenor.com/jSooB458wqUAAAAi/write-noted.gif
   utter_dots:
   - text: 。。。。。
   utter_wakarimashita:

@@ -159,7 +159,7 @@ stories:
   steps:
 #  - action: action_dummy
 #  - action: utter_askifsendemail
-  - intent: inform_yes
+  - intent: inform_yes_eng
   - action: utter_askrecipient
   - intent: inform_recipient
   - action: collect_email_info
@@ -174,7 +174,7 @@ stories:
   steps:
 #  - action: action_dummy
 #  - action: utter_askifsendemail
-  - intent: inform_no
+  - intent: inform_no_eng
   - action: action_delete_conversation_txt
   - action: utter_thanks_for_talking
   - action: utter_goodbye
