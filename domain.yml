@@ -13,17 +13,17 @@ intents:
 
 responses:
   utter_hello:
-  - text: こんにちは。お元気でか。
+  - text: こんにちは。お元気ですか。
   utter_intro:
-  - text: 医者です。今日は気分が悪いでしょうか。質問をこたえてください。
+  - text: 医者です。今日はどうしましたか。質問にこたえてください。
     image: https://media.tenor.com/96XrE_mpMQEAAAAi/nurse-doctor%27s-appointment.gif
   utter_thank_you:
-  - text: このよやくに来てくれてありがとうございました。また気分が悪かっら、ぜひれんらくしてください。
+  - text: わるくなったら、またきてください。
   utter_take_care:
   - text: お大事に。
     image: https://media.tenor.com/CJk3mN3Em1EAAAAi/goodbye-goodbye-see-you.gif
   utter_ask_cold:
-  - text: かぜをひきますか？
+  - text: かぜをひきましたか？
     image: https://media.tenor.com/pk14BEX9RYsAAAAi/kawai-cute.gif
   utter_ask_fever:
   - text: ねつがありますか？
@@ -35,35 +35,35 @@ responses:
   - text: よくおさけを飲みますか？
     image: https://media.tenor.com/yf3FEYsXYnAAAAAi/rabbit-animal.gif
   utter_ask_sad:
-  - text: さいきんさびしくて、かなしいですか？
+  - text: 気分はどうですか。かなしいですか？
     image: https://media.tenor.com/925LDfyVUGEAAAAi/cute-sad.gif
   utter_covid:
-  - text: 病気はコロナウイルスでしょう。
+  - text: コロナでしょう。
   utter_covid_advice:
-  - text: くすりを飲んで、じたく（家）にとどまったほうがいいでしょう。そしてよく手を洗ってください。
+  - text: くすりを飲んで、いえでやすんでください。よく手を洗ってください。
     image: https://media.tenor.com/YBRq5_7jMGMAAAAi/capoo-blue.gif
   utter_tired:
-  - text: 病気はひろうしょう。つまり、つかれているでょう。
+  - text: ただのつかれでしょう。
   utter_tired_advice:
-  - text: はやくねたほうがいいと思います。
+  - text: はやくねてください。
     image: https://media.tenor.com/84E5TjgX0NYAAAAi/sleep.gif
   utter_hangover:
-  - text: 病気はふつかよいでしょう。
+  - text: ふつかよいでしょう。
   utter_hangover_advice:
-  - text: 来月おさけを飲まないほうがいいでしょう。
+  - text: おさけを飲まないほうがいいでしょう。
     image: https://media.tenor.com/0WjzXQ70n70AAAAi/no-head-shaking.gif
   utter_homesick:
-  - text: 病気はホームシックでしょう。
+  - text: ホームシックでしょう。
   utter_homesick_advice:
   - text: 友だちと話したり両親に電話かけたりしたほうがいいでしょう。
     image: https://media.tenor.com/7NavtQBNi0IAAAAi/spikethe-hedgehog-phone.gif
   utter_healthy:
-  - text: 病気がありません。つまりけんこうでしょう。なぜ医者に来るかどうでしょうか。
+  - text: 病気じゃないです。どうしてきましたか。
     image: https://media.tenor.com/BnL0rOm6j3sAAAAi/quby-cute.gif
   utter_healthy_advice:
-  - text: 気分が悪かったら、ぜひ休んだほうがいいです。
+  - text: 気分が悪かったら、休んでください。
   utter_goodbye:
-  - text: さよなら。
+  - text: では、また。
     image: https://media.tenor.com/5f01dctcXNMAAAAi/greetings-hey.gif
   utter_sounandesuka:
   - text: そうなんですか。
@@ -75,7 +75,7 @@ responses:
   utter_wakarimashita:
   - text: わかりました。
   utter_iamabot:
-  - text: ラサのボートです.
+  - text: ラサです.
     image: https://media.tenor.com/arlZrN0YovkAAAAC/robot-smile.gif
   utter_default:
   - text: すみません、わかりません。 Please rephrase your answer.
